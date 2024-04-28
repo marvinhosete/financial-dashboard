@@ -1,0 +1,120 @@
+#preloader {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+}
+
+#preloader:before {
+    left: 0
+}
+
+#preloader:after,#preloader:before {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    height: 100%;
+    width: 50%;
+    --tw-bg-opacity: 1;
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    --tw-content: "";
+    content: var(--tw-content);
+
+    @apply bg-[#f7f7fd] dark:bg-[#141414];
+}
+
+#preloader:after {
+    left: auto;
+    right: 0
+}
+
+#preloader .loader_line {
+    position: relative;
+    margin: auto;
+    height: 25rem;
+    width: 1px;
+    overflow: hidden
+}
+
+#preloader .loader_line:before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 0;
+    width: .1rem;
+    --tw-translate-y: -50%;
+    transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+
+@keyframes lineheight {
+    0% {
+        content: var(--tw-content);
+        height: 0
+    }
+
+    to {
+        content: var(--tw-content);
+        height: 100%
+    }
+}
+
+#preloader .loader_line:before {
+    animation: lineheight 1s ease-in-out 0s forwards;
+    --tw-bg-opacity: 1;
+    @apply bg-[#333333] dark:bg-[#F5F5F5];
+    --tw-content: "";
+    content: var(--tw-content)
+}
+
+#preloader .loader_line:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    --tw-translate-y: -100%;
+    transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    --tw-bg-opacity: 1;
+    @apply bg-[#333333] dark:bg-[#F5F5F5];
+    --tw-content: "";
+    content: var(--tw-content)
+}
+
+#preloader .loader_line {
+    transition: all .8s ease 0s
+}
+
+@keyframes lineround {
+    transform {
+        height: translateY(200%)
+    }
+}
+
+.loader_line:after {
+    animation: lineround 1.2s linear 2s infinite
+}
+
+.preloaded .loader_line:after,.preloaded .logo {
+    opacity: 0
+}
+
+.preloaded .loader_line {
+    height: 100%!important;
+    opacity: 0
+}
+
+@keyframes preloadedzero {
+    0% {
+        width: 50%
+    }
+
+    to {
+        width: 0
+    }
+}
+
+.preloaded:after,.preloaded:before {
+    animation: preloadedzero .3s ease-in-out .5s forwards
+}

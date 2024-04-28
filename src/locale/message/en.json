@@ -1,0 +1,31 @@
+{
+    "sidebar": {
+        "dashboard": "Dashboard",
+        "profile": "Profile",
+        "cards": "Cards",
+        "support": "Support",
+        "settings": "Settings",
+        "logout": "Log Out"
+    },
+    "dashboard": {
+        "search": "Search",
+        "overview": "Overview",
+        "my-cards": {
+            "title": "My Cards",
+            "credit": "Credit",
+            "debit": "Debit",
+            "button": "New Card"
+        },
+        "my-balance": {
+            "title": "My Balance",
+            "income": "Income",
+            "spend": "Spend"
+        },
+        "monthly-expenses": "Monthly Expenses",
+        "sales": "Sales",
+        "pending-payments": "Pending Payments",
+        "recent-transactions": "Recent Transactions",
+        "see-all": "See all",
+        "ago": "ago"
+    }
+}

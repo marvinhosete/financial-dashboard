@@ -1,0 +1,31 @@
+{
+    "sidebar": {
+        "dashboard": "Painel",
+        "profile": "Perfil",
+        "cards": "Cartões",
+        "support": "Suporte",
+        "settings": "Configurações",
+        "logout": "Sair"
+    },
+    "dashboard": {
+        "search": "Buscar",
+        "overview": "Visão Geral",
+        "my-cards": {
+            "title": "Meus Cartões",
+            "credit": "Crédito",
+            "debit": "Débito",
+            "button": "Novo Cartão"
+        },
+        "my-balance": {
+            "title": "Meu Saldo",
+            "income": "Renda",
+            "spend": "Gastos"
+        },
+        "monthly-expenses": "Despesas Mensais",
+        "sales": "Vendas",
+        "pending-payments": "Pagamentos Pendentes",
+        "recent-transactions": "Transações Recentes",
+        "see-all": "Ver tudo",
+        "ago": "atrás"
+    }
+}
